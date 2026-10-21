@@ -1,0 +1,17 @@
+Step 1: Audio Peak Detection (The Broad Net)What it does:
+ Scans the audio track in seconds using RMS energy and $Z$-score thresholds [1].
+ Why it's first: It finds every moment where the crowd roared or commentators shouted,
+  instantly cutting down a 3-hour match into ~100–150 candidate timestamp windows [1].2.
+  
+  
+   Step 2: Scoreboard OCR Verification (The Event Filter)What it does:
+    Takes only those ~100–150 candidate windows flagged by the audio detector and inspects the 
+    scoreboard frames before (–8s) and after (+12s) [1].
+    Filter Rule: If the score changed (wicket or runs scored) AND the scoreboard was visible,
+     it confirms the audio spike as a true highlight [1].3.
+      Step 3: CNN Bowler Run-Up Classifier (The Start Trim)
+      What it does: Takes the confirmed highlight and scans the 10–15 seconds before the shot
+       using your .h5 model to find the exact frame where the bowler started running up [1].4. 
+       Step 4: Post-Roll & Stitching (The End Trim)
+       What it does: Cuts the clip 2–4 seconds after the highlight event, merges overlapping clips, 
+       and stitches the final video [1].

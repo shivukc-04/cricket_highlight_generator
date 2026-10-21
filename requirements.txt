@@ -1,0 +1,11 @@
+streamlit>=1.35
+numpy
+scipy
+pandas
+opencv-python
+librosa            # optional: used for RMS if installed, numpy fallback otherwise
+easyocr
+moviepy            # 1.0.x or 2.x both supported
+imageio-ffmpeg
+tensorflow>=2.16   # ships Keras 3 (the .h5 was saved with Keras 3)
+h5py

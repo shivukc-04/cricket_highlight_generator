@@ -1,0 +1,7 @@
+[server]
+# Full-match videos are large; allow uploads up to ~20 GB.
+maxUploadSize = 20000
+fileWatcherType = "none"
+
+[browser]
+gatherUsageStats = false

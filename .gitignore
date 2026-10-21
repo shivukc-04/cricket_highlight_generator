@@ -1,0 +1,23 @@
+# Run this command inside EACH project folder
+cat << 'EOF' > .gitignore
+# Virtual Environment
+myenvi/
+venv/
+env/
+.venv/
+
+# Python cache & build files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+*.mp4
+
+# IDE & System files
+.vscode/
+.idea/
+.DS_Store
+*.log
+EOF
