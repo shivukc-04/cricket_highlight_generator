@@ -4,7 +4,7 @@ An automated video summarization engine that correlates audio spectrogram spikes
 
 ---
 
-## 📌 Key Features
+## Key Features
 
 * **Multimodal Feature Fusion**: Combines audio signal processing (decibel/FFT analysis) and visual computer vision detection (CNN feature extraction).
 * **Audio Peak Detection**: Identifies crowd cheering noise spikes and commentary energy bursts using short-time Fourier transforms (STFT) in Librosa.
@@ -15,7 +15,7 @@ An automated video summarization engine that correlates audio spectrogram spikes
 
 ---
 
-## 🏗️ System Architecture & Workflow
+## System Architecture & Workflow
 
 ```
 +-------------------------------------------------------------------+
@@ -54,7 +54,7 @@ An automated video summarization engine that correlates audio spectrogram spikes
 
 ---
 
-## 🛠️ Tech Stack & Dependencies
+## Tech Stack & Dependencies
 
 * **Programming Language**: Python 3.10+
 * **Audio Signal Processing**: `librosa`, `scipy`, `numpy`
@@ -64,7 +64,7 @@ An automated video summarization engine that correlates audio spectrogram spikes
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 Cricket-Highlight-Generator/
@@ -85,7 +85,7 @@ Cricket-Highlight-Generator/
 
 ---
 
-## 🚀 Setup & Running Guide
+## Setup & Running Guide
 
 ### Prerequisites
 1. **Python 3.10+** installed.
@@ -104,7 +104,7 @@ python generate_highlights.py     --input data/raw_videos/match_recording.mp4   
 
 ---
 
-## ⚡ Performance Characteristics
+## Performance Characteristics
 
 * **Summarization Speed**: Processes a full 3-hour match in minutes through frame sampling and parallelized audio FFT extraction.
 * **Frame Accuracy**: Audio-video multiplexing maintains exact frame sync down to the millisecond.
